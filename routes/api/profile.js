@@ -128,7 +128,7 @@ router.get('/', async (req, res) => {
     }
 
 });
-
+     //test commit
 // @route   GET api/profile/user/:user_id
 // @desc    Get profile by user ID
 // @access  Public
@@ -350,7 +350,7 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
 // @access  Public
 router.get('/github/:username', (req, res) => {
     try {
-        const options = {  // no idea how below works
+        const options = {  // no idea how below works ( uri)
             uri: `https://api.github.com/users/${req.params.username}/repos?per_page
                 5&sort=created:asc&client_id=${config.get('githubClientId')}
                 &client_secret=${config.get('githubSecret')}`,
